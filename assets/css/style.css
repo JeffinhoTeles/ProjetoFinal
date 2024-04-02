@@ -1,0 +1,21 @@
+ *{
+   background-color:#CFC1A7 ;
+
+ }
+
+img#logo{
+   width: 100px;
+   height: 100px;
+   float: left;
+}
+.header__navegacao{
+display: inline;
+padding: 5px;
+}
+
+.header__navegacao ul li{
+ display: inline;
+ margin: 0px 5px;
+padding: 5px 1px;
+
+}
