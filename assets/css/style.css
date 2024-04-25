@@ -11,13 +11,19 @@ img#logo{
    position:absolute; 
    top: 5%; 
    left: 50%; 
+   border-radius: 50px;
    transform: translate(-50%, -50%);
 }
 
-.header__navegacao{
-display: inline;
-padding: 5px;
+
+
+.header__navegacao {
+  display: fle; /* Usando flexbox para alinhar os itens */ 
+  justify-content: space-between; /* Distribuir os itens horizontalmente */
+  background-color: #6e4321; /* Cor de fundo do cabeçalho de navegação */
+  padding: 5px; /* Espaçamento interno */
 }
+
 
 .header__navegacao ul li{
   display: grid;
@@ -61,6 +67,25 @@ header{
   height: auto;
   filter: opacity(50%);
   object-fit: cover; 
+}
+
+
+.header__navegacao ul {
+  list-style: none; 
+}
+
+.header__navegacao ul li {
+  display: inline-block; 
+  margin-right: 20px; 
+}
+
+.header__navegacao ul li a {
+  text-decoration: none; 
+  color: #6E4321; 
+}
+
+.header__navegacao ul li a:hover {
+  color: #efe8e2; 
 }
 
 
