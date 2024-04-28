@@ -3,7 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
     <meta name="keywords" content="bolos" />
     <meta
       name="description"
@@ -14,22 +34,45 @@
   </head>
   <body>
     <header class="header__navegacao">
-      <a href="./index.html">
-        <img src="./assets/img/logo.png" id="logo" alt="logo da confeitaria"
-      /></a>
       <nav>
+        <a href="./index.html">
+          <img
+            src="./assets/img/logo.png"
+            id="logo"
+            alt="logo da confeitaria"
+          />
+        </a>
         <ul>
           <li><a href="./index.html">Home</a></li>
-          <li><a href="./produtos.html"> Produtos</a></li>
-          <li><a href="./sobre.html"> Sobre</a></li>
-          <li><a href="./contatos.html"> Contatos</a></li>
+          <li><a href="./produtos.html">Produtos</a></li>
+          <li><a href="./sobre.html">Sobre</a></li>
+          <li><a href="./contatos.html">Contatos</a></li>
         </ul>
       </nav>
     </header>
+    <div
+      id="carouselExampleSlidesOnly"
+      class="carousel slide custom-carousel"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./assets/img/bolo.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./assets/img/docinhos.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/img/torta.jpg" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+    </div>
 
-    <section>
-      <p></p>
-    </section>
+    <section></section>
 
     <article></article>
 
@@ -39,8 +82,29 @@
       <nav></nav>
     </aside>
 
-    <footer>
-      <p>Design by Jeffinho</p>
+    <footer class="footer">
+      <nav>
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/bolosdatati01/" target="_blank">
+              <i class="fab fa-instagram"></i> Redes Sociais
+            </a>
+          </li>
+          <li>
+            <a href="https://instadelivery.com.br/bolosdatati" target="_blank">
+              <i class="fas fa-shopping-cart"></i> Faça seu pedido
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.google.com/maps/place/Bolos+da+Tati/@-23.6534512,-46.8148112,17z/data=!4m16!1m9!3m8!1s0x94ce53cbb7ce1405:0x48089cf6b0e358ee!2sBolos+da+Tati!8m2!3d-23.6534561!4d-46.8122363!9m1!1b1!16s%2Fg%2F11s7swb1ht!3m5!1s0x94ce53cbb7ce1405:0x48089cf6b0e358ee!8m2!3d-23.6534561!4d-46.8122363!16s%2Fg%2F11s7swb1ht?entry=ttu"
+              target="_blank"
+            >
+              <i class="fas fa-map-marker-alt"></i> Endereço
+            </a>
+          </li>
+        </ul>
+      </nav>
     </footer>
   </body>
 </html>
