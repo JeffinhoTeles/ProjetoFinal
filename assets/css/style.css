@@ -61,7 +61,7 @@ img#logo {
 }
 
 .bio {
-  padding: 20px;
+  padding: 60px;
   text-align: center;
   font-family: Open Sans;
   font-size: 22px;
@@ -149,5 +149,5 @@ img#logo {
 }
 
 .card-img-top {
-  height: 490px; /* Defina a altura desejada para as imagens dos cards */
+  height: 520px; 
 }
