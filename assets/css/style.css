@@ -22,7 +22,7 @@
 
 body {
   background-color: #CFC1A7;
-  font-family: 'Open Sans', sans-serif;
+ 
 }
 
 img#logo {
@@ -89,11 +89,11 @@ img#logo {
 .footer ul {
   list-style: none;
   padding: 0;
-  font-family: 'Pacifico',cursive;
+  
 }
 
 .footer ul li {
-  display: inline-block;
+  display: inline-block;  
   margin-right: 20px;
 }
 
@@ -102,13 +102,52 @@ img#logo {
   color: #ffffff;
   padding: 5px 10px;
   border-radius: 5px;
+  font-family: 'Pacifico',cursive;
 }
 
 .footer ul li a:hover {
   background-color: #8c5d35;
+  
 }
 
 .custom-carousel-img {
   max-height: 400px; 
   object-fit: cover;
+}
+
+.produtos{
+  margin-top: 20px;
+  font-family: 'Pacifico',cursive;  
+ text-align: center;
+ 
+}
+
+.quem-somos{
+  margin-top: 20px;
+  font-family: 'Pacifico',cursive;  
+ text-align: center;
+ 
+}
+
+.contatos{
+  margin-top: 20px;
+  font-family: 'Pacifico',cursive;  
+ text-align: center;
+ 
+}
+
+#sobre {
+  padding: 20px;
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 20px;
+}
+
+#formulario-contato{
+  font-family: Open Sans;
+  
+}
+
+.card-img-top {
+  height: 490px; /* Defina a altura desejada para as imagens dos cards */
 }
