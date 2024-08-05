@@ -1,4 +1,3 @@
-
 .grid-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr); 
@@ -9,12 +8,10 @@
   width: 100%; 
 }
 
-
 .flex-container {
   display: flex;
   flex-wrap: wrap; 
   justify-content: space-between; 
-  
 }
 
 .flex-item {
@@ -23,7 +20,6 @@
 
 body {
   background-color: #CFC1A7;
- 
 }
 
 img#logo {
@@ -54,7 +50,7 @@ img#logo {
   color: #ffffff;
   padding: 5px 10px;
   border-radius: 5px;
-  font-family: 'Pacifico',cursive;
+  font-family: 'Pacifico', cursive;
   font-size: 20px;
 }
 
@@ -64,8 +60,8 @@ img#logo {
 
 .bio {
   padding: 100px;
-  text-align:left;
-  font-family: Open Sans;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
   font-size: 23px;
 }
 
@@ -90,7 +86,6 @@ img#logo {
 .footer ul {
   list-style: none;
   padding: 0;
-  
 }
 
 .footer ul li {
@@ -103,13 +98,12 @@ img#logo {
   color: #ffffff;
   padding: 5px 10px;
   border-radius: 5px;
-  font-family: 'Pacifico',cursive;
+  font-family: 'Pacifico', cursive;
   font-size: 20px;
 }
 
 .footer ul li a:hover {
   background-color: #8c5d35;
-  
 }
 
 .custom-carousel-img {
@@ -117,40 +111,86 @@ img#logo {
   object-fit: cover;
 }
 
-.produtos{
+.produtos {
   margin-top: 20px;
-  font-family: 'Pacifico',cursive;  
- text-align: center;
- 
+  font-family: 'Pacifico', cursive;  
+  text-align: center;
 }
 
-.quem-somos{
+.quem-somos {
   margin-top: 20px;
-  font-family: 'Pacifico',cursive;  
- text-align: center;
- 
+  font-family: 'Pacifico', cursive;  
+  text-align: center;
 }
 
-.contatos{
+.contatos {
   margin-top: 20px;
-  font-family: 'Pacifico',cursive;  
- text-align: center;
- 
+  font-family: 'Pacifico', cursive;  
+  text-align: center;
 }
 
 #sobre {
   padding: 20px; 
-  font-family: Open Sans;
+  font-family: 'Open Sans', sans-serif;
   font-size: 20px;
-  text-align:left;
+  text-align: left;
 }
 
-#formulario-contato{
-  font-family: Open Sans;
-  
+#formulario-contato {
+  font-family: 'Open Sans', sans-serif;
 }
 
 .card-img-top {
   height: 520px; 
   cursor: pointer;
+}
+
+.add-to-cart {
+  background-color: #6e4321; /* Cor desejada */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+  background-color: #563314; /* Tom mais escuro da cor desejada */
+}
+
+.cart-icon {
+  font-size: 1.5em;
+  color: white;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedback-message {
+  display: none;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  padding: 15px;
+  border-radius: 5px;
+  color: white;
 }

@@ -70,10 +70,22 @@
                 <a class="nav-link" href="./contatos.html">Contato</a>
               </li>
             </ul>
+            <button
+              type="button"
+              class="btn btn-link ms-auto"
+              data-bs-toggle="modal"
+              data-bs-target="#carrinhoModal"
+            >
+              <i class="fas fa-shopping-cart cart-icon"></i>
+            </button>
           </div>
         </div>
       </nav>
     </header>
+
+    <div class="feedback-message alert alert-success" role="alert">
+      <span id="feedback-message-text"></span>
+    </div>
 
     <div
       id="carouselExampleSlidesOnly"
@@ -108,19 +120,26 @@
     <section class="container">
       <h1 class="produtos">Produtos</h1>
       <div class="row">
+        <!-- Lista de Produtos -->
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="card">
             <img
               src="./assets/img/bolo-fatia.jpg"
               class="card-img-top"
-              alt="..."
+              alt="Bolo Fatia"
               data-bs-toggle="modal"
               data-bs-target="#imagemModal"
               data-imagem="./assets/img/bolo-fatia.jpg"
             />
             <div class="card-body">
-              <h5 class="card-title">Produto 1</h5>
-              <p class="card-text">Descrição do Produto 1</p>
+              <h5 class="card-title">Fatia de bolo de cenoura</h5>
+              <p class="card-text">Fatia de bolo de cenoura</p>
+              <input
+                type="number"
+                class="form-control mb-2"
+                placeholder="Quantidade"
+              />
+              <button class="btn add-to-cart">Adicionar ao Carrinho</button>
             </div>
           </div>
         </div>
@@ -129,14 +148,20 @@
             <img
               src="./assets/img/bolo-pote.jpg"
               class="card-img-top"
-              alt="..."
+              alt="Bolo Pote"
               data-bs-toggle="modal"
               data-bs-target="#imagemModal"
               data-imagem="./assets/img/bolo-pote.jpg"
             />
             <div class="card-body">
-              <h5 class="card-title">Produto 2</h5>
-              <p class="card-text">Descrição do Produto 2</p>
+              <h5 class="card-title">Bolo de pote</h5>
+              <p class="card-text">Bolo de pote</p>
+              <input
+                type="number"
+                class="form-control mb-2"
+                placeholder="Quantidade"
+              />
+              <button class="btn add-to-cart">Adicionar ao Carrinho</button>
             </div>
           </div>
         </div>
@@ -145,14 +170,20 @@
             <img
               src="./assets/img/bolo-red.jpg"
               class="card-img-top"
-              alt="..."
+              alt="Bolo Red"
               data-bs-toggle="modal"
               data-bs-target="#imagemModal"
               data-imagem="./assets/img/bolo-red.jpg"
             />
             <div class="card-body">
-              <h5 class="card-title">Produto 3</h5>
-              <p class="card-text">Descrição do Produto 3</p>
+              <h5 class="card-title">Bolo Red Velvet</h5>
+              <p class="card-text">Bolo Red Velvet</p>
+              <input
+                type="number"
+                class="form-control mb-2"
+                placeholder="Quantidade"
+              />
+              <button class="btn add-to-cart">Adicionar ao Carrinho</button>
             </div>
           </div>
         </div>
@@ -161,14 +192,20 @@
             <img
               src="./assets/img/bolo-cupcake.jpg"
               class="card-img-top"
-              alt="..."
+              alt="Bolo Cupcake"
               data-bs-toggle="modal"
               data-bs-target="#imagemModal"
               data-imagem="./assets/img/bolo-cupcake.jpg"
             />
             <div class="card-body">
-              <h5 class="card-title">Produto 4</h5>
-              <p class="card-text">Descrição do Produto 4</p>
+              <h5 class="card-title">Bolo decorado</h5>
+              <p class="card-text">Bolo decorado</p>
+              <input
+                type="number"
+                class="form-control mb-2"
+                placeholder="Quantidade"
+              />
+              <button class="btn add-to-cart">Adicionar ao Carrinho</button>
             </div>
           </div>
         </div>
@@ -177,14 +214,20 @@
             <img
               src="./assets/img/docinho-ferreiro.jpg"
               class="card-img-top"
-              alt="..."
+              alt="Docinho Ferreiro"
               data-bs-toggle="modal"
               data-bs-target="#imagemModal"
               data-imagem="./assets/img/docinho-ferreiro.jpg"
             />
             <div class="card-body">
-              <h5 class="card-title">Produto 5</h5>
-              <p class="card-text">Descrição do Produto 5</p>
+              <h5 class="card-title">Docinhos</h5>
+              <p class="card-text">Docinhos</p>
+              <input
+                type="number"
+                class="form-control mb-2"
+                placeholder="Quantidade"
+              />
+              <button class="btn add-to-cart">Adicionar ao Carrinho</button>
             </div>
           </div>
         </div>
@@ -193,14 +236,20 @@
             <img
               src="./assets/img/ovo-pascoa.jpg"
               class="card-img-top"
-              alt="..."
+              alt="Ovo de Páscoa"
               data-bs-toggle="modal"
               data-bs-target="#imagemModal"
               data-imagem="./assets/img/ovo-pascoa.jpg"
             />
             <div class="card-body">
-              <h5 class="card-title">Produto 6</h5>
-              <p class="card-text">Descrição do Produto 6</p>
+              <h5 class="card-title">Ovo de Pascoa Nutella</h5>
+              <p class="card-text">Ovo de Pascoa Nutella</p>
+              <input
+                type="number"
+                class="form-control mb-2"
+                placeholder="Quantidade"
+              />
+              <button class="btn add-to-cart">Adicionar ao Carrinho</button>
             </div>
           </div>
         </div>
@@ -209,14 +258,20 @@
             <img
               src="./assets/img/torta.jpg"
               class="card-img-top"
-              alt="..."
+              alt="Torta"
               data-bs-toggle="modal"
               data-bs-target="#imagemModal"
               data-imagem="./assets/img/torta.jpg"
             />
             <div class="card-body">
-              <h5 class="card-title">Produto 7</h5>
-              <p class="card-text">Descrição do Produto 7</p>
+              <h5 class="card-title">Torta de frutas vermelhas</h5>
+              <p class="card-text">Torta de frutas vermelhas</p>
+              <input
+                type="number"
+                class="form-control mb-2"
+                placeholder="Quantidade"
+              />
+              <button class="btn add-to-cart">Adicionar ao Carrinho</button>
             </div>
           </div>
         </div>
@@ -225,14 +280,20 @@
             <img
               src="./assets/img/coxinha-morango.jpg"
               class="card-img-top"
-              alt="..."
+              alt="Coxinha de Morango"
               data-bs-toggle="modal"
               data-bs-target="#imagemModal"
               data-imagem="./assets/img/coxinha-morango.jpg"
             />
             <div class="card-body">
-              <h5 class="card-title">Produto 8</h5>
-              <p class="card-text">Descrição do Produto 8</p>
+              <h5 class="card-title">Coxinha de morango</h5>
+              <p class="card-text">Coxinha de morango</p>
+              <input
+                type="number"
+                class="form-control mb-2"
+                placeholder="Quantidade"
+              />
+              <button class="btn add-to-cart">Adicionar ao Carrinho</button>
             </div>
           </div>
         </div>
@@ -241,14 +302,20 @@
             <img
               src="./assets/img/bolo.jpg"
               class="card-img-top"
-              alt="..."
+              alt="Bolo"
               data-bs-toggle="modal"
               data-bs-target="#imagemModal"
               data-imagem="./assets/img/bolo.jpg"
             />
             <div class="card-body">
-              <h5 class="card-title">Produto 8</h5>
-              <p class="card-text">Descrição do Produto 8</p>
+              <h5 class="card-title">Bolo red velvet</h5>
+              <p class="card-text">Bolo red velvet</p>
+              <input
+                type="number"
+                class="form-control mb-2"
+                placeholder="Quantidade"
+              />
+              <button class="btn add-to-cart">Adicionar ao Carrinho</button>
             </div>
           </div>
         </div>
@@ -265,7 +332,54 @@
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-body">
-            <img id="imagemModalImg" src="" class="img-fluid" alt="" />
+            <img
+              id="imagemModalImg"
+              src=""
+              class="img-fluid"
+              alt="Imagem do Produto"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="carrinhoModal"
+      tabindex="-1"
+      aria-labelledby="carrinhoModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="carrinhoModalLabel">
+              Carrinho de Compras
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <ul id="carrinho" class="list-group"></ul>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Fechar
+            </button>
+            <button type="button" class="btn btn-primary">
+              Finalizar Compra
+            </button>
+            <button type="button" class="btn btn-danger" id="limparCarrinho">
+              Limpar Carrinho
+            </button>
           </div>
         </div>
       </div>
