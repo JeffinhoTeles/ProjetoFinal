@@ -26,6 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#limparCarrinho").addEventListener("click", () => {
     limparCarrinho();
   });
+
+  updateCartCount(); // Atualize o contador quando a página carregar
 });
 
 function handleAddToCart(produto) {
@@ -57,6 +59,7 @@ function handleAddToCart(produto) {
     `Você adicionou ${quantidade} unidades do ${nomeProduto} ao carrinho.`,
     "alert-success"
   );
+  updateCartCount(); // Atualize o contador ao adicionar um produto
 }
 
 function handleImageClick(imagem) {
@@ -90,6 +93,7 @@ function renderCart() {
 function limparCarrinho() {
   localStorage.setItem("produtos", JSON.stringify([]));
   renderCart();
+  updateCartCount(); // Atualize o contador ao limpar o carrinho
   showFeedbackMessage("O carrinho foi limpo.", "alert-success");
 }
 
@@ -101,4 +105,15 @@ function showFeedbackMessage(message, alertClass) {
   setTimeout(() => {
     feedbackMessage.style.display = "none";
   }, 3000);
+}
+
+function updateCartCount() {
+  const produtos = JSON.parse(localStorage.getItem("produtos"));
+  const totalCount = produtos.reduce(
+    (total, produto) => total + parseInt(produto.quantidade),
+    0
+  );
+  const cartCountElement = document.getElementById("cart-count");
+  cartCountElement.innerText = totalCount;
+  cartCountElement.style.display = totalCount > 0 ? "inline-block" : "none";
 }
