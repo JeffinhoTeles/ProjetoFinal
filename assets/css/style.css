@@ -1,38 +1,46 @@
+/* Define uma área de contêiner usando o modelo de grid */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(12, 1fr); 
-  grid-gap: 20px; 
+  grid-template-columns: repeat(12, 1fr); /* 12 colunas de largura igual */
+  grid-gap: 20px; /* Espaçamento de 20px entre as colunas */
 }
 
+/* Define os itens do grid */
 .grid-item {
-  width: 100%; 
+  width: 100%; /* Ocupa 100% da largura do contêiner */
 }
 
+/* Define um contêiner flexível */
 .flex-container {
   display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-between; 
+  flex-wrap: wrap; /* Permite que os itens flexíveis quebrem para a próxima linha */
+  justify-content: space-between; /* Distribui os itens com espaço igual entre eles */
 }
 
+/* Define os itens do contêiner flexível */
 .flex-item {
-  width: calc(50% - 10px); 
+  width: calc(50% - 10px); /* Cada item ocupa 50% da largura do contêiner, menos 10px */
 }
 
+/* Define a cor de fundo do corpo do documento */
 body {
   background-color: #CFC1A7;
 }
 
+/* Estiliza a imagem com o ID 'logo' */
 img#logo {
   width: 70px;
   height: 70px;
-  border-radius: 50px;
+  border-radius: 50px; /* Torna a imagem circular */
 }
 
+/* Estiliza a navegação no cabeçalho */
 .header__navegacao {
   background-color: #6e4321;
   padding: 10px 20px;
 }
 
+/* Remove estilos padrão de lista da navegação */
 .header__navegacao ul {
   list-style: none;
   margin: 0;
@@ -40,11 +48,13 @@ img#logo {
   text-align: center;
 }
 
+/* Estiliza os itens da lista de navegação */
 .header__navegacao ul li {
   display: inline-block;
   margin-right: 20px;
 }
 
+/* Estiliza os links da navegação */
 .header__navegacao ul li a {
   text-decoration: none;
   color: #ffffff;
@@ -54,10 +64,12 @@ img#logo {
   font-size: 20px;
 }
 
+/* Adiciona um efeito de hover aos links da navegação */
 .header__navegacao ul li a:hover {
   background-color: #8c5d35;
 }
 
+/* Estiliza a seção de biografia */
 .bio {
   padding: 100px;
   text-align: left;
@@ -65,17 +77,20 @@ img#logo {
   font-size: 23px;
 }
 
+/* Estiliza a seção de confeiteira */
 .confeiteira {
   padding: 20px;
   text-align: center;
 }
 
+/* Estiliza as imagens na seção de confeiteira */
 .confeiteira img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;  
 }
 
+/* Estiliza o rodapé */
 .footer {
   background-color: #6e4321;
   padding: 1px 20px;
@@ -83,16 +98,19 @@ img#logo {
   color: #fff;
 }
 
+/* Remove estilos padrão de lista do rodapé */
 .footer ul {
   list-style: none;
   padding: 0;
 }
 
+/* Estiliza os itens da lista no rodapé */
 .footer ul li {
   display: inline-block;  
   margin-right: 20px;
 }
 
+/* Estiliza os links no rodapé */
 .footer ul li a {
   text-decoration: none;
   color: #ffffff;
@@ -102,33 +120,25 @@ img#logo {
   font-size: 20px;
 }
 
+/* Adiciona um efeito de hover aos links no rodapé */
 .footer ul li a:hover {
   background-color: #8c5d35;
 }
 
+/* Estiliza imagens em um carrossel personalizado */
 .custom-carousel-img {
   max-height: 400px; 
   object-fit: cover;
 }
 
-.produtos {
+/* Estiliza as seções de produtos, quem somos e contatos */
+.produtos, .quem-somos, .contatos {
   margin-top: 20px;
   font-family: 'Pacifico', cursive;  
   text-align: center;
 }
 
-.quem-somos {
-  margin-top: 20px;
-  font-family: 'Pacifico', cursive;  
-  text-align: center;
-}
-
-.contatos {
-  margin-top: 20px;
-  font-family: 'Pacifico', cursive;  
-  text-align: center;
-}
-
+/* Estiliza a seção 'sobre' */
 #sobre {
   padding: 20px; 
   font-family: 'Open Sans', sans-serif;
@@ -136,17 +146,20 @@ img#logo {
   text-align: left;
 }
 
+/* Estiliza o formulário de contato */
 #formulario-contato {
   font-family: 'Open Sans', sans-serif;
 }
 
+/* Define a altura das imagens no topo dos cartões e adiciona um cursor pointer */
 .card-img-top {
   height: 520px; 
   cursor: pointer;
 }
 
+/* Estiliza o botão 'add-to-cart' */
 .add-to-cart {
-  background-color: #6e4321; /* Cor desejada */
+  background-color: #6e4321; /* Cor do fundo */
   border: none;
   color: white;
   padding: 10px 20px;
@@ -159,31 +172,37 @@ img#logo {
   transition: background-color 0.3s;
 }
 
+/* Adiciona um efeito de hover ao botão 'add-to-cart' */
 .add-to-cart:hover {
-  background-color: #563314; /* Tom mais escuro da cor desejada */
+  background-color: #563314; /* Tom mais escuro da cor do fundo */
 }
 
+/* Estiliza o ícone do carrinho */
 .cart-icon {
   font-size: 1.5em;
   color: white;
 }
 
+/* Estiliza os cartões de produtos */
 .card {
   margin-bottom: 20px;
 }
 
+/* Define a disposição dos elementos dentro do corpo dos cartões */
 .card-body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
+/* Estiliza o contêiner de botões */
 .btn-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* Estiliza a mensagem de feedback */
 .feedback-message {
   display: none;
   position: fixed;
@@ -197,6 +216,7 @@ img#logo {
   text-align: center;
 }
 
+/* Estiliza os badges */
 .badge {
   font-size: 1em; 
   font-weight: bold;
@@ -211,7 +231,7 @@ img#logo {
   justify-content: center;
 }
 
-/* Responsividade do modal do carrinho */
+/* Define a responsividade do modal do carrinho para telas menores */
 @media (max-width: 767px) {
   .modal-dialog {
     max-width: 100%;
