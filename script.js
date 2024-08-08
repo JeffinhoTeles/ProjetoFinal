@@ -33,87 +33,70 @@ document.addEventListener("DOMContentLoaded", () => {
 function handleAddToCart(produto) {
   const nomeProduto = produto.querySelector(".card-title").innerText;
   const quantidadeInput = produto.querySelector("input[type='number']");
-  const quantidade = quantidadeInput.value;
+  const quantidade = parseInt(quantidadeInput.value) || 1;
 
-  if (!quantidade || quantidade <= 0) {
-    showFeedbackMessage(
-      "Por favor, insira uma quantidade válida.",
-      "alert-danger"
-    );
-    return;
-  }
-
-  let produtos = JSON.parse(localStorage.getItem("produtos"));
+  let produtos = JSON.parse(localStorage.getItem("produtos")) || [];
   const produtoExistente = produtos.find((p) => p.nome === nomeProduto);
 
   if (produtoExistente) {
-    produtoExistente.quantidade =
-      parseInt(produtoExistente.quantidade) + parseInt(quantidade);
+    produtoExistente.quantidade += quantidade;
   } else {
     produtos.push({ nome: nomeProduto, quantidade });
   }
 
   localStorage.setItem("produtos", JSON.stringify(produtos));
   quantidadeInput.value = "";
-  showFeedbackMessage(
-    `Você adicionou ${quantidade} unidades do ${nomeProduto} ao carrinho.`,
-    "alert-success"
-  );
-  updateCartCount(); // Atualize o contador ao adicionar um produto
-}
-
-function handleImageClick(imagem) {
-  const src = imagem.getAttribute("data-imagem");
-  const modalImagem = document.getElementById("imagemModalImg");
-  const myModal = new bootstrap.Modal(document.getElementById("imagemModal"));
-  modalImagem.src = src;
-  myModal.show();
+  showFeedbackMessage(`Adicionado ${quantidade}x ${nomeProduto} ao carrinho!`);
+  updateCartCount(); // Atualize o contador quando um produto for adicionado
 }
 
 function renderCart() {
-  const cartList = document.getElementById("carrinho");
-  cartList.innerHTML = "";
-
-  const produtos = JSON.parse(localStorage.getItem("produtos"));
-
-  if (produtos.length === 0) {
-    cartList.innerHTML =
-      '<li class="list-group-item">O carrinho está vazio.</li>';
-    return;
-  }
+  const carrinho = document.querySelector("#carrinho");
+  carrinho.innerHTML = "";
+  let produtos = JSON.parse(localStorage.getItem("produtos")) || [];
 
   produtos.forEach((produto) => {
-    const listItem = document.createElement("li");
-    listItem.classList.add("list-group-item");
-    listItem.innerText = `${produto.nome} - Quantidade: ${produto.quantidade}`;
-    cartList.appendChild(listItem);
+    const li = document.createElement("li");
+    li.className =
+      "list-group-item d-flex justify-content-between align-items-center";
+    li.innerHTML = `${produto.nome} <span class="badge bg-primary rounded-pill">${produto.quantidade}</span>`;
+    carrinho.appendChild(li);
   });
 }
 
 function limparCarrinho() {
   localStorage.setItem("produtos", JSON.stringify([]));
   renderCart();
-  updateCartCount(); // Atualize o contador ao limpar o carrinho
-  showFeedbackMessage("O carrinho foi limpo.", "alert-success");
+  updateCartCount(); // Atualize o contador quando o carrinho for limpo
 }
 
-function showFeedbackMessage(message, alertClass) {
+function handleImageClick(image) {
+  const imagemModal = document.querySelector("#imagemModalImg");
+  imagemModal.src = image.dataset.imagem;
+}
+
+function showFeedbackMessage(message) {
   const feedbackMessage = document.querySelector(".feedback-message");
-  feedbackMessage.className = `feedback-message alert ${alertClass}`;
-  document.getElementById("feedback-message-text").innerText = message;
+  feedbackMessage.querySelector("#feedback-message-text").innerText = message;
   feedbackMessage.style.display = "block";
+  feedbackMessage.classList.add("show");
+
   setTimeout(() => {
     feedbackMessage.style.display = "none";
+    feedbackMessage.classList.remove("show");
   }, 3000);
 }
 
 function updateCartCount() {
-  const produtos = JSON.parse(localStorage.getItem("produtos"));
+  let produtos = JSON.parse(localStorage.getItem("produtos")) || [];
   const totalCount = produtos.reduce(
-    (total, produto) => total + parseInt(produto.quantidade),
+    (total, produto) => total + produto.quantidade,
     0
   );
-  const cartCountElement = document.getElementById("cart-count");
-  cartCountElement.innerText = totalCount;
-  cartCountElement.style.display = totalCount > 0 ? "inline-block" : "none";
+
+  const cartCount = document.getElementById("cart-count");
+  const cartCountMobile = document.getElementById("cart-count-mobile");
+
+  if (cartCount) cartCount.innerText = totalCount;
+  if (cartCountMobile) cartCountMobile.innerText = totalCount;
 }

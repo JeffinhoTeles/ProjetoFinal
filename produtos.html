@@ -72,7 +72,7 @@
           </ul>
           <button
             type="button"
-            class="btn btn-link ms-auto position-relative"
+            class="btn btn-link ms-auto position-relative d-none d-lg-block"
             data-bs-toggle="modal"
             data-bs-target="#carrinhoModal"
           >
@@ -85,6 +85,23 @@
       </div>
     </nav>
   </header>
+
+  <!-- Botão do carrinho para dispositivos menores -->
+  <div class="container mt-3 d-block d-lg-none">
+    <div class="d-flex justify-content-end">
+      <button
+        type="button"
+        class="btn btn-link position-relative"
+        data-bs-toggle="modal"
+        data-bs-target="#carrinhoModal"
+      >
+        <i class="fas fa-shopping-cart cart-icon"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-count-mobile">
+          0
+        </span>
+      </button>
+    </div>
+  </div>
 
   <div class="feedback-message alert alert-success" role="alert">
     <span id="feedback-message-text"></span>
@@ -352,7 +369,7 @@
     aria-labelledby="carrinhoModalLabel"
     aria-hidden="true"
   >
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="carrinhoModalLabel">
@@ -411,7 +428,8 @@
               >
                 <i class="fas fa-shopping-cart"></i> Faça seu pedido
               </a>
-            </ul>
+            </li>
+          </ul>
         </div>
         <div class="col-lg-4">
           <ul class="list-unstyled">

@@ -210,3 +210,16 @@ img#logo {
   align-items: center;
   justify-content: center;
 }
+
+/* Responsividade do modal do carrinho */
+@media (max-width: 767px) {
+  .modal-dialog {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .modal-content {
+    height: 100vh;
+    overflow-y: auto;
+  }
+}
