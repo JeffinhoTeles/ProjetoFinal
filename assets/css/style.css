@@ -1,25 +1,25 @@
 /* Define uma área de contêiner usando o modelo de grid */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(12, 1fr); /* 12 colunas de largura igual */
-  grid-gap: 20px; /* Espaçamento de 20px entre as colunas */
+  grid-template-columns: repeat(12, 1fr); /* Cria 12 colunas de largura igual */
+  grid-gap: 20px; /* Define um espaçamento de 20px entre as colunas */
 }
 
 /* Define os itens do grid */
 .grid-item {
-  width: 100%; /* Ocupa 100% da largura do contêiner */
+  width: 100%; /* Garante que os itens ocupem 100% da largura disponível no contêiner */
 }
 
 /* Define um contêiner flexível */
 .flex-container {
   display: flex;
-  flex-wrap: wrap; /* Permite que os itens flexíveis quebrem para a próxima linha */
+  flex-wrap: wrap; /* Permite que os itens flexíveis quebrem para a próxima linha quando necessário */
   justify-content: space-between; /* Distribui os itens com espaço igual entre eles */
 }
 
 /* Define os itens do contêiner flexível */
 .flex-item {
-  width: calc(50% - 10px); /* Cada item ocupa 50% da largura do contêiner, menos 10px */
+  width: calc(50% - 10px); /* Cada item ocupa 50% da largura do contêiner, menos 10px de margem */
 }
 
 /* Define a cor de fundo do corpo do documento */
@@ -37,209 +37,230 @@ img#logo {
 /* Estiliza a navegação no cabeçalho */
 .header__navegacao {
   background-color: #6e4321;
-  padding: 10px 20px;
+  padding: 10px 20px; /* Adiciona espaçamento ao redor da navegação */
 }
 
 /* Remove estilos padrão de lista da navegação */
 .header__navegacao ul {
-  list-style: none;
+  list-style: none; /* Remove as bolinhas padrão das listas */
   margin: 0;
   padding: 0;
-  text-align: center;
+  text-align: center; /* Centraliza os itens da lista */
 }
 
 /* Estiliza os itens da lista de navegação */
 .header__navegacao ul li {
-  display: inline-block;
-  margin-right: 20px;
+  display: inline-block; /* Exibe os itens em linha */
+  margin-right: 20px; /* Adiciona espaçamento entre os itens */
 }
 
 /* Estiliza os links da navegação */
 .header__navegacao ul li a {
-  text-decoration: none;
-  color: #ffffff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-family: 'Pacifico', cursive;
-  font-size: 20px;
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: #ffffff; /* Define a cor do texto dos links */
+  padding: 5px 10px; /* Adiciona espaçamento interno aos links */
+  border-radius: 5px; /* Adiciona bordas arredondadas aos links */
+  font-family: 'Pacifico', cursive; /* Define a fonte dos links */
+  font-size: 20px; /* Define o tamanho da fonte dos links */
 }
 
 /* Adiciona um efeito de hover aos links da navegação */
 .header__navegacao ul li a:hover {
-  background-color: #8c5d35;
+  background-color: #8c5d35; /* Altera a cor de fundo ao passar o mouse sobre o link */
 }
 
 /* Estiliza a seção de biografia */
 .bio {
-  padding: 100px;
-  text-align: left;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 23px;
+  padding: 100px; /* Adiciona espaçamento interno à seção de biografia */
+  text-align: left; /* Alinha o texto à esquerda */
+  font-family: 'Open Sans', sans-serif; /* Define a fonte para a biografia */
+  font-size: 23px; /* Define o tamanho da fonte para a biografia */
 }
 
 /* Estiliza a seção de confeiteira */
 .confeiteira {
-  padding: 20px;
-  text-align: center;
+  padding: 20px; /* Adiciona espaçamento interno à seção */
+  text-align: center; /* Centraliza o conteúdo da seção */
 }
 
 /* Estiliza as imagens na seção de confeiteira */
 .confeiteira img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;  
+  max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 8px; /* Adiciona bordas arredondadas à imagem */
 }
 
 /* Estiliza o rodapé */
 .footer {
   background-color: #6e4321;
-  padding: 1px 20px;
-  text-align: center;
-  color: #fff;
+  padding: 1px 20px; /* Adiciona espaçamento interno ao rodapé */
+  text-align: center; /* Centraliza o texto no rodapé */
+  color: #fff; /* Define a cor do texto no rodapé */
 }
 
 /* Remove estilos padrão de lista do rodapé */
 .footer ul {
-  list-style: none;
+  list-style: none; /* Remove as bolinhas padrão das listas */
   padding: 0;
 }
 
 /* Estiliza os itens da lista no rodapé */
 .footer ul li {
-  display: inline-block;  
-  margin-right: 20px;
+  display: inline-block; /* Exibe os itens em linha */
+  margin-right: 20px; /* Adiciona espaçamento entre os itens */
 }
 
 /* Estiliza os links no rodapé */
 .footer ul li a {
-  text-decoration: none;
-  color: #ffffff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-family: 'Pacifico', cursive;
-  font-size: 20px;
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: #ffffff; /* Define a cor do texto dos links */
+  padding: 5px 10px; /* Adiciona espaçamento interno aos links */
+  border-radius: 5px; /* Adiciona bordas arredondadas aos links */
+  font-family: 'Pacifico', cursive; /* Define a fonte dos links */
+  font-size: 20px; /* Define o tamanho da fonte dos links */
 }
 
 /* Adiciona um efeito de hover aos links no rodapé */
 .footer ul li a:hover {
-  background-color: #8c5d35;
+  background-color: #8c5d35; /* Altera a cor de fundo ao passar o mouse sobre o link */
 }
 
 /* Estiliza imagens em um carrossel personalizado */
 .custom-carousel-img {
-  max-height: 400px; 
-  object-fit: cover;
+  max-height: 400px; /* Define a altura máxima das imagens do carrossel */
+  object-fit: cover; /* Corta a imagem para cobrir o contêiner */
 }
 
 /* Estiliza as seções de produtos, quem somos e contatos */
 .produtos, .quem-somos, .contatos {
-  margin-top: 20px;
-  font-family: 'Pacifico', cursive;  
-  text-align: center;
+  margin-top: 20px; /* Adiciona uma margem superior às seções */
+  font-family: 'Pacifico', cursive; /* Define a fonte das seções */
+  text-align: center; /* Centraliza o texto nas seções */
 }
 
 /* Estiliza a seção 'sobre' */
 #sobre {
-  padding: 20px; 
-  font-family: 'Open Sans', sans-serif;
-  font-size: 20px;
-  text-align: left;
+  padding: 20px; /* Adiciona espaçamento interno à seção */
+  font-family: 'Open Sans', sans-serif; /* Define a fonte para a seção 'sobre' */
+  font-size: 20px; /* Define o tamanho da fonte */
+  text-align: left; /* Alinha o texto à esquerda */
 }
 
 /* Estiliza o formulário de contato */
 #formulario-contato {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif; /* Define a fonte para o formulário de contato */
 }
 
 /* Define a altura das imagens no topo dos cartões e adiciona um cursor pointer */
 .card-img-top {
-  height: 520px; 
-  cursor: pointer;
+  height: 520px; /* Define uma altura fixa para as imagens no topo dos cartões */
+  cursor: pointer; /* Adiciona um cursor de pointer para indicar que a imagem é clicável */
 }
 
 /* Estiliza o botão 'add-to-cart' */
 .add-to-cart {
-  background-color: #6e4321; /* Cor do fundo */
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin-top: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  background-color: #6e4321; /* Define a cor de fundo do botão */
+  border: none; /* Remove a borda padrão */
+  color: white; /* Define a cor do texto do botão */
+  padding: 10px 20px; /* Adiciona espaçamento interno ao botão */
+  text-align: center; /* Centraliza o texto dentro do botão */
+  text-decoration: none; /* Remove o sublinhado do texto */
+  display: inline-block; /* Faz o botão se comportar como um elemento inline-block */
+  font-size: 16px; /* Define o tamanho da fonte do botão */
+  margin-top: 10px; /* Adiciona uma margem superior ao botão */
+  border-radius: 5px; /* Adiciona bordas arredondadas ao botão */
+  transition: background-color 0.3s; /* Adiciona uma transição suave para a mudança de cor de fundo */
 }
 
 /* Adiciona um efeito de hover ao botão 'add-to-cart' */
 .add-to-cart:hover {
-  background-color: #563314; /* Tom mais escuro da cor do fundo */
+  background-color: #563314; /* Altera a cor de fundo ao passar o mouse sobre o botão */
 }
 
 /* Estiliza o ícone do carrinho */
 .cart-icon {
-  font-size: 1.5em;
-  color: white;
+  font-size: 1.5em; /* Define o tamanho da fonte do ícone */
+  color: white; /* Define a cor do ícone */
 }
 
 /* Estiliza os cartões de produtos */
 .card {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Adiciona uma margem inferior aos cartões */
 }
 
 /* Define a disposição dos elementos dentro do corpo dos cartões */
 .card-body {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: column; /* Organiza os elementos em coluna */
+  justify-content: space-between; /* Distribui os elementos com espaço igual entre eles */
 }
 
 /* Estiliza o contêiner de botões */
 .btn-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: column; /* Organiza os botões em coluna */
+  align-items: center; /* Centraliza os botões horizontalmente */
 }
 
 /* Estiliza a mensagem de feedback */
 .feedback-message {
-  display: none;
-  position: fixed;
-  top: 10px;
-  right: 50%;
-  transform: translateX(50%);
-  z-index: 1000;
-  padding: 15px;
-  border-radius: 5px;
-  color: white;
-  text-align: center;
+  display: none; /* Esconde a mensagem de feedback por padrão */
+  position: fixed; /* Fixa a mensagem em uma posição específica da tela */
+  top: 10px; /* Define a posição da mensagem a 10px do topo */
+  right: 50%; /* Alinha a mensagem ao centro horizontalmente */
+  transform: translateX(50%); /* Corrige a posição da mensagem para que ela fique centralizada */
+  z-index: 1000; /* Define a prioridade de sobreposição da mensagem */
+  padding: 15px; /* Adiciona espaçamento interno à mensagem */
+  border-radius: 5px; /* Adiciona bordas arredondadas à mensagem */
+  color: white; /* Define a cor do texto */
+  text-align: center; /* Centraliza o texto */
 }
 
-/* Estiliza os badges */
+/* Estiliza os badges (etiquetas) */
 .badge {
-  font-size: 1em; 
-  font-weight: bold;
-  border-radius: 50%;
-  padding: 0.5em 0.75em;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  transform: translate(-50%, -50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 1em; /* Define o tamanho da fonte do badge */
+  font-weight: bold; /* Define o peso da fonte como negrito */
+  border-radius: 50%; /* Torna o badge circular */
+  padding: 0.5em 0.75em; /* Define o espaçamento interno do badge */
+  position: absolute; /* Posiciona o badge de forma absoluta */
+  top: 10px; /* Define a posição do badge a 10px do topo */
+  right: 10px; /* Define a posição do badge a 10px da direita */
+  transform: translate(-50%, -50%); /* Centraliza o badge no ponto especificado */
+  display: flex; /* Define o badge como um flex container */
+  align-items: center; /* Alinha os itens do badge verticalmente ao centro */
+  justify-content: center; /* Centraliza os itens do badge horizontalmente */
 }
 
 /* Define a responsividade do modal do carrinho para telas menores */
 @media (max-width: 767px) {
   .modal-dialog {
-    max-width: 100%;
-    margin: 0;
+    max-width: 100%; /* Garante que o modal ocupe 100% da largura da tela */
+    margin: 0; /* Remove as margens padrão */
   }
 
   .modal-content {
-    height: 100vh;
-    overflow-y: auto;
+    height: 100vh; /* Define a altura do modal para ocupar 100% da altura da tela */
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical caso o conteúdo do modal seja maior que a tela */
   }
+}
+
+/* Estiliza a mensagem de feedback */
+.feedback-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza a mensagem horizontalmente */
+  z-index: 1055; /* Coloca a mensagem acima do modal */
+  background-color: #28a745; /* Define a cor de fundo para indicar sucesso */
+  color: white; /* Define a cor do texto */
+  padding: 10px 20px; /* Adiciona espaçamento interno à mensagem */
+  border-radius: 5px; /* Adiciona bordas arredondadas à mensagem */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra para destaque */
+}
+
+/* Estiliza os badges personalizados */
+.custom-badge {
+  vertical-align: middle; /* Alinha o badge ao centro verticalmente */
+  margin-top: 10px; /* Adiciona uma margem superior ao badge */
 }
