@@ -181,6 +181,8 @@
             <div class="card-body">
               <h5 class="card-title">Fatia de bolo de cenoura</h5>
               <p class="card-text">Fatia de bolo de cenoura</p>
+              <p class="card-price">R$ 10,00</p>
+              <!-- Preço adicionado -->
               <input
                 type="number"
                 class="form-control mb-2"
@@ -205,6 +207,8 @@
             <div class="card-body">
               <h5 class="card-title">Bolo de pote</h5>
               <p class="card-text">Bolo de pote</p>
+              <p class="card-price">R$ 12,00</p>
+              <!-- Preço adicionado -->
               <input
                 type="number"
                 class="form-control mb-2"
@@ -228,6 +232,8 @@
             <div class="card-body">
               <h5 class="card-title">Bolo Red Velvet</h5>
               <p class="card-text">Bolo Red Velvet</p>
+              <p class="card-price">R$ 15,00</p>
+              <!-- Preço adicionado -->
               <input
                 type="number"
                 class="form-control mb-2"
@@ -251,6 +257,8 @@
             <div class="card-body">
               <h5 class="card-title">Bolo decorado</h5>
               <p class="card-text">Bolo decorado</p>
+              <p class="card-price">R$ 20,00</p>
+              <!-- Preço adicionado -->
               <input
                 type="number"
                 class="form-control mb-2"
@@ -274,6 +282,8 @@
             <div class="card-body">
               <h5 class="card-title">Docinhos</h5>
               <p class="card-text">Docinhos</p>
+              <p class="card-price">R$ 8,00</p>
+              <!-- Preço adicionado -->
               <input
                 type="number"
                 class="form-control mb-2"
@@ -297,6 +307,8 @@
             <div class="card-body">
               <h5 class="card-title">Ovo de Pascoa Nutella</h5>
               <p class="card-text">Ovo de Pascoa Nutella</p>
+              <p class="card-price">R$ 25,00</p>
+              <!-- Preço adicionado -->
               <input
                 type="number"
                 class="form-control mb-2"
@@ -320,6 +332,8 @@
             <div class="card-body">
               <h5 class="card-title">Torta de frutas vermelhas</h5>
               <p class="card-text">Torta de frutas vermelhas</p>
+              <p class="card-price">R$ 18,00</p>
+              <!-- Preço adicionado -->
               <input
                 type="number"
                 class="form-control mb-2"
@@ -343,6 +357,8 @@
             <div class="card-body">
               <h5 class="card-title">Coxinha de morango</h5>
               <p class="card-text">Coxinha de morango</p>
+              <p class="card-price">R$ 5,00</p>
+              <!-- Preço adicionado -->
               <input
                 type="number"
                 class="form-control mb-2"
@@ -366,6 +382,8 @@
             <div class="card-body">
               <h5 class="card-title">Bolo red velvet</h5>
               <p class="card-text">Bolo red velvet</p>
+              <p class="card-price">R$ 15,00</p>
+              <!-- Preço adicionado -->
               <input
                 type="number"
                 class="form-control mb-2"
@@ -423,6 +441,8 @@
           </div>
           <div class="modal-body">
             <ul id="carrinho" class="list-group"></ul>
+            <p id="totalCarrinho">Total: R$ 0,00</p>
+            <!-- Total do carrinho -->
           </div>
           <div class="modal-footer">
             <button
@@ -432,7 +452,7 @@
             >
               Fechar
             </button>
-            <button type="button" class="btn btn-primary">
+            <button type="button" class="btn btn-primary" id="finalizarCompra">
               Finalizar Compra
             </button>
             <button type="button" class="btn btn-danger" id="limparCarrinho">
@@ -511,6 +531,8 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="carrinho.js"></script>
+    <script src="dom.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
